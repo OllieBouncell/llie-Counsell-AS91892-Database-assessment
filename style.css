@@ -1,0 +1,32 @@
+.background-color {
+  background-color: black;
+  overflow: auto;
+  /* found on W3 schools allowes the background to overflow the page with the background (the color black) */
+
+
+}
+
+.header-name {
+  font-family: 'Press Start 2P';
+  text-align: center;
+  padding: 10px;
+  font-size: 35px;
+  color: white;
+}
+
+.login {
+  float: left;
+  padding: 10px;
+  padding-left: 200px;
+  
+}
+
+
+.leaderboard {
+
+  float: right;
+  padding: 10px;
+  padding-right: 200px;
+  padding-bottom: 50px;
+  
+}
