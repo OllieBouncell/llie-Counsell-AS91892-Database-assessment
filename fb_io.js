@@ -1,4 +1,7 @@
-function fb_leaderboardpage() {
+function fb_leaderboard() {
+  location.href = "leaderboard.html";
+}
+function fb_leaderboardgame() {
   location.href = "leaderboard.html";
 }
 function fb_loginpage() {

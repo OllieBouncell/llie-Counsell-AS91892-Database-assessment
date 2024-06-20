@@ -18,7 +18,7 @@
   float: left;
   padding: 10px;
   padding-left: 200px;
-  
+
 }
 
 
@@ -28,5 +28,32 @@
   padding: 10px;
   padding-right: 200px;
   padding-bottom: 50px;
-  
+
+}
+
+
+.leaderboardgame {
+
+  float: right;
+  padding-left: 1000px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.geodash-img {
+  display: block;
+  float: right;
+  padding: 50px;
+  padding-bottom: 10px;
+
+}
+
+
+.infinity-assult-img {
+  display: block;
+  float: left;
+  padding: 50px;
+  padding-bottom: 10px;
+
+
 }
