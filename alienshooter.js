@@ -15,7 +15,7 @@ var nextSpawn = 0;
 let bullets = [];
 var score = 0;
 var lives = 3;
-var screenSelector = "start"; 
+var screenSelector = "start";
 
 /*******************************************************/
 // setting up game
@@ -26,9 +26,9 @@ function preload() {
     imgPlayer = loadImage('/images/player.png');
 }
 
- //parameter function for inviisble wall //
-function invisible_wall(x, y, w, h){
-    wallSide  = new Sprite(x, y, w, h, 's');
+//parameter function for inviisble wall //
+function invisible_wall(x, y, w, h) {
+    wallSide = new Sprite(x, y, w, h, 's');
     wallSide.color = 'lightblue';
     wallSide = noStroke();
 }
@@ -45,9 +45,9 @@ function setup() {
     bulletGroup = new Group();
 
     // invisble Border around the screen //
-    invisible_wall(0, SCREEN_HEIGHT/2, WALL_WDITH, SCREEN_HEIGHT);
-    invisible_wall(SCREEN_WIDTH/2, SCREEN_HEIGHT, SCREEN_WIDTH, WALL_WDITH);
-    invisible_wall(SCREEN_WIDTH/2, 0, SCREEN_WIDTH, WALL_WDITH);
+    invisible_wall(0, SCREEN_HEIGHT / 2, WALL_WDITH, SCREEN_HEIGHT);
+    invisible_wall(SCREEN_WIDTH / 2, SCREEN_HEIGHT, SCREEN_WIDTH, WALL_WDITH);
+    invisible_wall(SCREEN_WIDTH / 2, 0, SCREEN_WIDTH, WALL_WDITH);
 
     //  the player and the image for the player //
     player = new Sprite(100, 100, 20, 'd');
@@ -56,28 +56,28 @@ function setup() {
     imgPlayer.resize(100, 100);
 
     // where you press space to switch through screens //
-    document.addEventListener("keydown", 
+    document.addEventListener("keydown",
         function(event) {
-            if(screenSelector == "start" || screenSelector == "end"){
+            if (screenSelector == "start" || screenSelector == "end") {
                 screenSelector = "game"
                 resetGame()
             }
-    }); 
+        });
 
-     // Keyboard Movement-Up and Down //
+    // Keyboard Movement-Up and Down //
     document.addEventListener("keydown", function(event) {
 
         if (event.code === 'ArrowLeft') {
             player.vel.x = -3;
         }
-        else if (event.code === 'ArrowRight')  {
+        else if (event.code === 'ArrowRight') {
             player.vel.x = 3;
         }
         else if (event.code === 'ArrowUp') {
             player.vel.y = -3;
         }
-        else if (event.code === 'ArrowDown')  {
-            player.vel.y = 3; 
+        else if (event.code === 'ArrowDown') {
+            player.vel.y = 3;
         }
     });
 
@@ -89,18 +89,18 @@ function setup() {
         else if (event.code === 'ArrowRight') {
             player.vel.x = 0;
         }
-        else if (event.code === 'ArrowUp')  {
+        else if (event.code === 'ArrowUp') {
             player.vel.y = 0;
         }
-        else if (event.code === 'ArrowDown')  {
+        else if (event.code === 'ArrowDown') {
             player.vel.y = 0;
         }
 
     });
 
-//collisions
+    //collisions
     player.collides(obstacles, playerHitobstacle);
-    bulletGroup.collides(obstacles, bulletHitObstacle);    
+    bulletGroup.collides(obstacles, bulletHitObstacle);
 }
 
 
@@ -113,15 +113,16 @@ function draw() {
 
     if (lives <= 0) {
         screenSelector = "end";
+        fb_saveScore(score);
     }
 
-    if(screenSelector=="game"){
-       gameScreen();
+    if (screenSelector == "game") {
+        gameScreen();
     }
-    else if(screenSelector=="end"){
+    else if (screenSelector == "end") {
         endScreen();
     }
-    else if(screenSelector=="start"){
+    else if (screenSelector == "start") {
         startScreen();
     }
     else {
@@ -134,14 +135,14 @@ function draw() {
 
 // when a key is pressed the bullet is shot  //
 function keyPressed() {
-      if (keyCode == 32) {
-            bullet = new Sprite( player.x + 50, player.y, 5, 'd');
-            bullet.color = 'yellow';
-            bullet.bounciness = 0;
-            bullet.vel.x = 3;
-            bulletGroup.add(bullet);
-            bullet.life = 30; // life of how many frames the bullet lasts found on p5.play website
-        }
+    if (keyCode == 32) {
+        bullet = new Sprite(player.x + 50, player.y, 5, 'd');
+        bullet.color = 'yellow';
+        bullet.bounciness = 0;
+        bullet.vel.x = 3;
+        bulletGroup.add(bullet);
+        bullet.life = 30; // life of how many frames the bullet lasts found on p5.play website
+    }
 
 }
 
@@ -166,7 +167,7 @@ function newObstacle() {
 
 
 
-  // Remove bullet and obstacle and add score  //
+// Remove bullet and obstacle and add score  //
 function bulletHitObstacle(bullet, obstacle) {
     player.bounciness = 0;
     obstacle.remove();
@@ -174,8 +175,8 @@ function bulletHitObstacle(bullet, obstacle) {
     score++;
 }
 
- // when player hits allien player loses life  //
-function playerHitobstacle (_player,obstacle) {
+// when player hits allien player loses life  //
+function playerHitobstacle(_player, obstacle) {
     obstacle.remove();
     console.log("Lives");
     lives--;
@@ -187,8 +188,8 @@ function playerHitobstacle (_player,obstacle) {
 // functions for each screen
 /*******************************************************/
 
- // Startscreen function aka the landing page   //
-function startScreen(){
+// Startscreen function aka the landing page   //
+function startScreen() {
     //setup for startscreen
     allSprites.visible = false;
     background("orange");
@@ -216,7 +217,7 @@ function startScreen(){
 
 
 // gameScreen function where the user plays the game   //
-function gameScreen(){
+function gameScreen() {
     //setup for gamescreen
     background("lightblue");
     player.rotation = 0;
@@ -224,24 +225,24 @@ function gameScreen(){
     allSprites.visible = true;
 
     //displays lives
-    for (i = 0; i <lives; i++){
+    for (i = 0; i < lives; i++) {
         rect(40 * i, 10, 35, 35);
     }
 
     fill(0);
     stroke(0);
-    strokeWeight(); 
+    strokeWeight();
     textSize(32);
     text(score, 410, 40);
 
     //how quick obstacles spawn
-    if(frameCount > nextSpawn){
+    if (frameCount > nextSpawn) {
         newObstacle();
-        nextSpawn = frameCount + random(10,200);
+        nextSpawn = frameCount + random(10, 200);
     }
 }
 // endScreen function where the user dies   //
-function endScreen(){
+function endScreen() {
     //setup for endscreen
     background("orange");
     allSprites.visible = false;
@@ -251,16 +252,16 @@ function endScreen(){
     strokeWeight(4);
 
     //text for endscreen
-    text("You Died your lives have reached: " +lives, 50, 50);
+    text("You Died your lives have reached: " + lives, 50, 50);
     textSize(24);
-    text("your score was: "+score, 50, 110);
+    text("your score was: " + score, 50, 110);
     textSize(14);
     text("press any key to restart", 50, 150);
 
 }
 
 // resetGame where the game resets so you can play again //
-function resetGame(){
+function resetGame() {
     //setup for reseting the game
     score = 0;
     lives = 3;
@@ -270,5 +271,5 @@ function resetGame(){
     bulletGroup.removeAll();
     spawnDist = 0;
     nextSpawn = 0;
-    gameScreen();  
- }
+    gameScreen();
+}
