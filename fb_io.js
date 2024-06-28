@@ -133,3 +133,9 @@ function fb_saveScore(score) {
 
 
 }
+
+function fb_changePage(url){
+  console.log(url)
+  window.location = url
+}
+  
