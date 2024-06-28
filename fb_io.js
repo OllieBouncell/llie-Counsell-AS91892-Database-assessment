@@ -91,7 +91,7 @@ function fb_register() {
     window.location = 'gamepage.html'
   }
 }
-function fb_saveScore(score) {
+function fb_saveScore(game, score) {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       console.log(user);
@@ -103,7 +103,7 @@ function fb_saveScore(score) {
       console.log(uid);
       // ...
       console.log(userName + " score was " + score)
-      firebase.database().ref('geoDash/' + uid).set({
+      firebase.database().ref(game + uid).set({
         [userName]: score
       });
     } else {
@@ -138,4 +138,8 @@ function fb_changePage(url){
   console.log(url)
   window.location = url
 }
+
+function fb_leaderboardtwo(){
+  window.location = 'leaderboard.html'
   
+}

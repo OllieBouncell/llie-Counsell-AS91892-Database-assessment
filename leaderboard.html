@@ -20,13 +20,33 @@
   <!-- firebase end ******************************************-->
   <script src="fb_setup.js"></script>
   <script src="fb_io.js"></script>
+  <script src="leaderboard.js"></script>
 
 </head>
 
 <body>
   <div class="background-color">
-    <div class="header-name">leaderboard</div>
+    <div class="header-name">
+      leaderboard
+    </div>
   </div>
+
+  <div class="geo">
+    <button onclick="fb_gameScores('infinity leaerboard', '/infinityAssult')">
+      infiniy leaderboard
+    </button>
+    <div id="infinity leaerboard">
+    </div>
+  </div>
+  
+  <div class="inf">
+    <button onclick="fb_gameScores('geodash leaerboard', '/geoDash')">
+      geodash leaderboard
+    </button>
+    <div id="geodash leaerboard">
+    </div>
+  </div>
+  
 </body>
 
 </html>

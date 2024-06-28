@@ -72,7 +72,7 @@ function newObstacle() {
 
 // How the Player dies
 function youDied(_player, _obstacle) {
-    fb_saveScore(score);
+    fb_saveScore('geoDash/', score);
     screenSelector = "end";
     player.remove();
     obstacles.removeAll();

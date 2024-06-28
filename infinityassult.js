@@ -113,7 +113,7 @@ function draw() {
 
     if (lives <= 0) {
         screenSelector = "end";
-        fb_saveScore(score);
+        fb_saveScore('infinityAssult/', score);
     }
 
     if (screenSelector == "game") {

@@ -70,3 +70,19 @@
   color: white;
   padding: 0px;
 }
+
+.geo {
+  float: right;
+  padding: 50px;
+  padding-bottom: 10px;
+
+}
+
+
+.inf {
+  float: left;
+  padding: 50px;
+  padding-bottom: 10px;
+
+
+}
