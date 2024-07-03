@@ -9,7 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
   <link href="style.css" rel="stylesheet" type="text/css" />
-
+  <!-- font press-start-2P **********************************-->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <!-- firebase start ****************************************-->
   <!-- Firebase App (core Firebase SDK) is always required & must be listed 1st -->
   <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>  
@@ -32,14 +33,28 @@
   BODY
 ****************************************************-->
 <body>
+  <div class="background-color">
+    <div class="header-name"> 
+     Login
+    </div>
+    <div class = "spaceship-img">
+     <img src="images/spaceship.png" alt="Spaceman" width="auto" height="300" >
+    </div>
+    
     <form onsubmit="return false;">
+       <div class="screen-name"> 
         <label for="HTML_screen_name">Screen name:</label><br>
         <input type="text" id="HTML_screen_name" name="name" value="name"><br>
+         </div>
+      <div class="screen-age"> 
         <label for="HTML_age">Age:</label><br>
         <input type="text" id="HTML_age" name="age" value="99"><br><br>
-        <input onClick="fb_register()" type="submit" value="submit">
+  </div>
+        <input  onClick="fb_register()" type="submit" value="submit">
     </form>
 
+    
+    </div>
 </body>
 </html>
 <!--***************************************************

@@ -66,10 +66,10 @@ function fb_register() {
         age: HTML_age.value,
         googleName: userName
       }
-      firebase.database().ref('users/' + uid).set(data).then(_DOTHIS);
+      console.log(data)
+      firebase.database().ref('/users/' + uid).set(data).then(_DOTHIS);
       // ...
       // ...
-      fb_getRegistration(uid);
 
     } else {
       // User is signed out
@@ -91,6 +91,7 @@ function fb_register() {
     window.location = 'gamepage.html'
   }
 }
+
 function fb_saveScore(game, score) {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
@@ -142,4 +143,9 @@ function fb_changePage(url){
 function fb_leaderboardtwo(){
   window.location = 'leaderboard.html'
   
+}
+
+function fb_gamepage(){
+  window.location = 'gamepage.html'
+
 }

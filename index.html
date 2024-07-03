@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Ollies GameHaven</title>
   <meta charset="UTF-8">
@@ -7,18 +8,19 @@
   <meta name="keywords" content="12COMP,Firebase">
   <meta name="author" content="Ollie-12COMP">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8">
+  <meta charset="utf-8">
   <link href="style.css" rel="stylesheet" type="text/css" />
-
+  <!-- font press-start-2P **********************************-->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <!-- firebase start ****************************************-->
   <!-- Firebase App (core Firebase SDK) is always required & must be listed 1st -->
-  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>  
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
   <!-- Add Firebase products that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>  
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script> 
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
   <!-- firebase end ******************************************-->
-  <script src="fb_setup.js"></script> 
+  <script src="fb_setup.js"></script>
   <script src="fb_io.js"></script>
 
 
@@ -27,9 +29,25 @@
 <!--***************************************************
   BODY
 ****************************************************-->
+
 <body>
-  <button onclick="fb_login()"> Login </button>
+  <div class="background-color">
+    <div class="header-name">
+      Ollies GameHaven
+    </div>
+    <button class="login-button" onclick="fb_login()"> Login </button>
+
+    <div class="alien-spaceship-img">
+      <img src="images/alien-spaceship.png" >
+    </div>
+
+    <div class="spaceman-img">
+      <img src="images/spaceman.png">
+    </div>
+  </div>
+
 </body>
+
 </html>
 <!--***************************************************
   END OF INDEX.HTML

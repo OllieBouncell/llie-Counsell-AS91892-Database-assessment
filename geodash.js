@@ -76,7 +76,7 @@ function youDied(_player, _obstacle) {
     screenSelector = "end";
     player.remove();
     obstacles.removeAll();
-}
+};
 
 // Main screen functions
 

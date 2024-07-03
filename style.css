@@ -14,31 +14,6 @@
   color: white;
 }
 
-.login {
-  float: left;
-  padding: 10px;
-  padding-left: 200px;
-
-}
-
-
-.leaderboard {
-
-  float: right;
-  padding: 10px;
-  padding-right: 200px;
-  padding-bottom: 50px;
-
-}
-
-
-.leaderboard-two {
-
-  float: right;
-  padding-left: 1000px;
-  padding-right: 20px;
-  padding-bottom: 10px;
-}
 
 .geodash-img {
   display: block;
@@ -58,12 +33,49 @@
 
 }
 
+
+
+.spaceship-img {
+  display: block;
+  float: right;
+  padding-right: 150px;
+}
+
+
+.spaceman-img {
+  display: block;
+  padding: 50px;
+}
+
+.alien-spaceship-img {
+  float: right;
+  padding: 10px;
+ margin: 0px auto;
+}
+
+
+
+
+
+
+.spaceman-crown-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+   padding-left: 200px;
+}
+
+
+
 .screen-name {
   color: white;
+  padding: 10px;
 }
 
 .screen-age {
   color: white;
+  padding: 10px;
 }
 
 .submit-button {
@@ -75,6 +87,7 @@
   float: right;
   padding: 50px;
   padding-bottom: 10px;
+  color: white;
 
 }
 
@@ -83,6 +96,96 @@
   float: left;
   padding: 50px;
   padding-bottom: 10px;
+  color: white;
 
 
+}
+
+.gamepage-button {
+  display: block;
+  text-align: center;
+  background-color: #fdb147;
+  color: black;
+  border: 2px solid #fdb147;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 20px auto;
+
+}
+
+.gamepage-button:hover {
+  background-color: #f4c27b;
+}
+
+
+
+
+
+.login-button {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  background-color: #fdb147;
+  color: black;
+  border: 2px solid #fdb147;
+  font-size: 24px;
+   cursor: pointer;
+
+}
+
+.login-button:hover {
+  background-color: #f4c27b;
+}
+
+
+.inf-button {
+  display: block;
+  background-color: #fdb147;
+  color: black;
+  border: 2px solid #fdb147;
+  font-size: 18px;
+   cursor: pointer;
+}
+
+.inf-button:hover {
+  background-color: #f4c27b;
+}
+
+
+.geo-button {
+  display: block;
+  background-color: #fdb147;
+  color: black;
+  border: 2px solid #fdb147;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.geo-button:hover {
+  background-color: #f4c27b;
+}
+
+
+.geo-button {
+  display: block;
+  background-color: #fdb147;
+  color: black;
+  border: 2px solid #fdb147;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.geo-button:hover {
+  background-color: #f4c27b;
+}
+
+.leaderboard-button {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  background-color: #fdb147;
+  color: black;
+  border: 2px solid #fdb147;
+  font-size: 18px;
+  cursor: pointer;
 }
